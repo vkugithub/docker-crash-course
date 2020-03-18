@@ -58,11 +58,27 @@
 				<groupId>com.google.cloud.tools</groupId>
 				<artifactId>jib-maven-plugin</artifactId>
 				<version>1.6.1</version>
-				<configuration>
-					<container>
-						<creationTime>USE_CURRENT_TIMESTAMP</creationTime>
-					</container>
-				</configuration>
+                <configuration>
+                    <from>
+                        <image>openjdk:alpine</image>
+                    </from>
+                    <to>
+                        <image>114997/${project.name}</image>
+                        <tags>
+                            <tag>${project.version}</tag>
+                            <tag>latest</tag>
+                        </tags>
+                    </to>
+                    <container>
+                        <jvmFlags>
+                            <jvmFlag>-Xms512m</jvmFlag>
+                        </jvmFlags>
+                        <mainClass>com.in28minutes.rest.webservices.restfulwebservices.RestfulWebServicesApplication</mainClass>
+                        <ports>
+                            <port>8100</port>
+                        </ports>
+                    </container>
+                </configuration>
 				<executions>
 					<execution>
 						<phase>package</phase>
