@@ -52,6 +52,11 @@ ADD target/hello-world-rest-api.jar hello-world-rest-api.jar
 ENTRYPOINT ["sh", "-c", "java -jar /hello-world-rest-api.jar"]
 ```
 
+Run docker command to build the image :docker build -t 114997/hello-world-rest-api:dockerfile1 .
+docker run -p 8081:8080 114997/hello-world-rest-api:dockerfile1
+http://localhost:8081/hello-world-bean
+
+
 ### Level 2
 
 ```
