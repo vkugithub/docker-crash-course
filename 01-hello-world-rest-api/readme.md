@@ -2,7 +2,7 @@
 
 ### Building an Image
 
-1. Build a Jar - /target/hello-world-rest-api.jar
+1. Build a Jar - /target/hello-world-rest-api.jar      _#you can use mvn package to build jar_
 2. Setup the Prerequisites for Running the JAR - openjdk:8-jdk-alpine
 3. Copy the jar
 4. Run the jar
@@ -56,7 +56,7 @@ Run docker command to build the image :docker build -t 114997/hello-world-rest-a
 docker run -p 8081:8080 114997/hello-world-rest-api:dockerfile1
 http://localhost:8081/hello-world-bean
 
-
+docker history in28min/hello-world-rest-api:dockerfile1  #to look history of image.
 ### Level 2
 
 ```
