@@ -61,9 +61,10 @@ services:
 ### Naming Server
 
 ```
-docker run -p 8761:8761 --name naming-server --network currency-network in28min/netflix-eureka-naming-server:0.0.1-SNAPSHOT
-docker run -p 8000:8000 --network currency-network --name currency-exchange-service in28min/currency-exchange-service:0.0.1-SNAPSHOT
-docker run -p 8100:8100 --network currency-network --name currency-conversion-service in28min/currency-conversion-service:0.0.1-SNAPSHOT
+docker run -p 8761:8761 --name naming-server --network currency-network 114997/netflix-eureka-naming-server:0.0.1-SNAPSHOT
+docker run -p 8000:8000 --network currency-network --name currency-exchange-service 114997/currency-exchange-service:0.0.1-SNAPSHOT
+docker run -p 8100:8100 --network currency-network --name currency-conversion-service 114997/currency-conversion-service:0.0.1-SNAPSHOT
+docker-compose scale currency-exchange-service=2   #for scaling currency-excange-service 
 ```
 
 docker-compose.yml

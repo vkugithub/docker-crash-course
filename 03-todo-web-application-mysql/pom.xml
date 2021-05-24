@@ -6,7 +6,7 @@
 
 	<groupId>com.in28minutes.springboot.web</groupId>
 	<artifactId>03-todo-web-application-mysql</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.2-SNAPSHOT</version>
 	<packaging>war</packaging>
 	<name>todo-web-application-mysql</name>
 
@@ -124,12 +124,12 @@
 						<id>default</id>
 						<goals>
 							<goal>build</goal>
-							 <!-- <goal>push</goal> -->
+							  <goal>push</goal>
 						</goals>
 					</execution>
 				</executions>
 				<configuration>
-					<repository>in28min/${project.name}</repository>
+					<repository>114997/${project.name}</repository>
 					<tag>${project.version}</tag>
 					<skipDockerInfo>true</skipDockerInfo>
 				</configuration>

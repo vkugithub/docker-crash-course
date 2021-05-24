@@ -22,7 +22,17 @@ We will deploy to Docker as a WAR
 - http://localhost:8080/h2-console
 - Use `jdbc:h2:mem:testdb` as JDBC URL 
 
+## Notes
+Q.  Difference between ADD and COPY in docker file
 
+A. ADD can unzip from a special format during copy and copy is used jsut only to copy the file 
+
+Q. Diff in cmd and ENTRYPOINT
+A. CMD command can be replaced with parameter during doocker image run but entryPoint is not replaced during execution, in best practise we shouuld use entrypoint entrypoint can be used with parameter -entrypoint 'actual command'
+
+docker login
+
+docker push <image_name>
 ## Plugins
 
 ### Dockerfile Maven

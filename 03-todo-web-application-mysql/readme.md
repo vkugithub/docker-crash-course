@@ -98,7 +98,7 @@ docker container run -p 8080:8080 --link=mysql -e RDS_HOSTNAME=mysql  in28min/to
 Using Custom Network
 
 ```
-docker container run -p 8080:8080 --network=web-application-mysql-network -e RDS_HOSTNAME=mysql  in28min/todo-web-application-mysql:0.0.1-SNAPSHOT
+docker container run -p 8080:8080 --network=web-application-mysql-network -e RDS_HOSTNAME=mysql  114997/todo-web-application-mysql:0.0.1-SNAPSHOT
 ```
 
 ### Playing with custom networks
@@ -108,6 +108,23 @@ docker network ls
 docker network create web-application-mysql-network
 docker inspect web-application-mysql-network
 ```
+
+### How to restart a container
+docker container restart mysql
+
+### Docker compose commands
+
+docker-compose up
+docker-compose down
+docker-compose config
+docker-compose images
+docker-compose ps
+docker-compose top
+docker-compose pause
+docker-compose unpause
+docker-compose rm
+docker-compose build
+docker-compose events
 
 ### Host Networking in Docker for Mac
 

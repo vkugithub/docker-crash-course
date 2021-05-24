@@ -364,6 +364,8 @@ docker system df
 docker container stop 1b1
 docker container kill 9b8
 
+docker-compose up
+docker-compose down
 docker-compose config
 docker-compose images
 docker-compose ps
